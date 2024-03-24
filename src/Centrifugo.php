@@ -338,7 +338,7 @@ class Centrifugo implements CentrifugoInterface
     }
 
     /**
-     * Unsubscribe user from channel.
+     * Unsubscribe user from a channel.
      *
      * @param string $channel
      * @param string $user

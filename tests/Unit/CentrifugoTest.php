@@ -80,13 +80,13 @@ class CentrifugoTest extends TestCase
     public function testCentrifugoApiUnsubscribe()
     {
         $unsubscribe = $this->centrifuge->unsubscribe('test-channel', '1');
-        $this->assertEquals([], $unsubscribe);
+        $this->assertEquals([], $unsubscribe['result']);
     }
 
     public function testCentrifugoApiSubscribe()
     {
         $subscribe = $this->centrifuge->unsubscribe('test-channel', '1');
-        $this->assertEquals([], $subscribe);
+        $this->assertEquals([], $subscribe['result']);
     }
 
     public function testCentrifugoApiStats()
