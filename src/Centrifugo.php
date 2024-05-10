@@ -441,13 +441,14 @@ class Centrifugo implements CentrifugoInterface
     /**
      * Generate user CONNECTION token.
      *
-     * @param int|string $userId Required. This is a standard JWT claim which must contain an ID of the current application user (as string)
-     * @param int|Carbon $exp    Optional. Token expiration time. Carbon time or UNIX
+     * @param int|string $userId    Required. This is a standard JWT claim which must contain an ID of the current application user (as string)
+     * @param int|Carbon $exp       Optional. Token expiration time. Carbon time or UNIX
      * @param array      $info
+     * @param array      $channels  Optional. The channels to automatically subscribe to when connecting
      *
      * @return string
      */
-    public function generateConnectionToken(int|string $userId, int|Carbon $exp = 0, array $info = []): string
+    public function generateConnectionToken(int|string $userId, int|Carbon $exp = 0, array $info = [], array $channels = []): string
     {
         $payload = [
             'sub' => (string) $userId,
@@ -456,6 +457,10 @@ class Centrifugo implements CentrifugoInterface
 
         if (!empty($info)) {
             $payload['info'] = $info;
+        }
+
+        if (!empty($channels)) {
+            $payload['channels'] = $channels;
         }
 
         return $this->createJWTToken($payload);
