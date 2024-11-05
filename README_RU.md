@@ -8,21 +8,21 @@
 <a href="https://github.com/opekunov/laravel-centrifugo-broadcaster/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Software License"></a>
 </p>
 
-<h1 align="center">Laravel Centrifugo 4 Broadcaster</h1>
-<h2 align="center">Centrifugo 4 broadcast драйвер для Laravel 8.75 - 10.x </h2>
+<h1 align="center">Laravel Centrifugo 4-5 Broadcaster</h1>
+<h2 align="center">Centrifugo 4-5 broadcast драйвер для Laravel 8.75 - 11.x </h2>
 
 > Для Centrifugo 2.8 - 3.x используйте [версию 1.2.6](https://github.com/Opekunov/laravel-centrifugo-broadcaster/tree/master)
 
 ## Особенности
 
-- Совместимость с последней версией [Centrifugo 4.x](https://github.com/centrifugal/centrifugo/) 🚀
+- Совместимость с последней версией [Centrifugo 5.x](https://github.com/centrifugal/centrifugo/) 🚀
 - Обертка над [Centrifugo HTTP API](https://centrifugal.dev/docs/server/server_api/) 🔌
 - Аутентификация с помощью токена JWT (HMAC) 🗝️
 
 ## Требования
 
 - PHP >= 8.0
-- Laravel 8.75 - 10.x
+- Laravel 8.75 - 11.x
 - guzzlehttp/guzzle 6 - 7
 - Centrifugo Сервер 4.x или новее (см. [здесь](https://github.com/centrifugal/centrifugo))
 
